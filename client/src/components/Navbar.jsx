@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const CustomNavbar = () => {
   // Function to determine the class name based on active state

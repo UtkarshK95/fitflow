@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 import { Form, Button, Container, Alert } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const UpdateWorkout = () => {
   const { id } = useParams();

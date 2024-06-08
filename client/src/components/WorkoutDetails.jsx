@@ -1,6 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const WorkoutDetails = ({ workout }) => {
   const { dispatch } = useWorkoutsContext();

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 import { Form, Button, Alert } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const WorkoutForm = () => {
   const { dispatch } = useWorkoutsContext();

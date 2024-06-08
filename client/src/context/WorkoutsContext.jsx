@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const WorkoutsContext = createContext();
 

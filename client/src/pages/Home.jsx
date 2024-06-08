@@ -3,6 +3,7 @@ import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 import WorkoutDetails from "../components/WorkoutDetails";
 import WorkoutForm from "../components/WorkoutForm";
 import { Container, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
   const { workouts, dispatch } = useWorkoutsContext();
