@@ -33,7 +33,7 @@ FitFlow is a web application designed to help users track and manage their worko
     ```
 3. Create a `.env` file in the `server` directory and add your environment variables:
     ```env
-    PORT=5000
+    PORT=4000
     MONGODB_URI=your_mongodb_connection_string
     ```
 4. Start the server:
