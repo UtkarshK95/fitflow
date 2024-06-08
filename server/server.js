@@ -21,16 +21,15 @@ app.use((req, res, next) => {
 app.use("/api/workouts", workoutRoutes);
 
 // connect to db
-const port = process.env.PORT || 3000;
-
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => {
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
+    console.log("connected to database");
+    // listen to port
+    app.listen(process.env.PORT, () => {
+      console.log("listening for requests on port", process.env.PORT);
     });
   })
-  .catch((err) => console.error(err));
+  .catch((err) => {
+    console.log(err);
+  });
