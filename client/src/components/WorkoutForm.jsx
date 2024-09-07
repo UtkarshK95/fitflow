@@ -15,13 +15,16 @@ const WorkoutForm = () => {
 
     const workout = { title, load, reps };
 
-    const response = await fetch("http://localhost:4000/api/workouts", {
-      method: "POST",
-      body: JSON.stringify(workout),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://fitflow-server.onrender.com/api/workouts",
+      {
+        method: "POST",
+        body: JSON.stringify(workout),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const json = await response.json();
 

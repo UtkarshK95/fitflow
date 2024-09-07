@@ -13,7 +13,9 @@ const UpdateWorkout = () => {
 
   useEffect(() => {
     const fetchWorkout = async () => {
-      const response = await fetch(`http://localhost:4000/api/workouts/${id}`);
+      const response = await fetch(
+        `https://fitflow-server.onrender.com/api/workouts/${id}`
+      );
       const json = await response.json();
 
       if (response.ok) {
@@ -29,13 +31,16 @@ const UpdateWorkout = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`http://localhost:4000/api/workouts/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify(workout),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `https://fitflow-server.onrender.com/api/workouts/${id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(workout),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const json = await response.json();
 
